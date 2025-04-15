@@ -28,8 +28,9 @@ class SurahDetailViewModel : ViewModel() {
                 val response = repository.getSurahDetail(surahNumber)
                 if (response.isSuccessful) {
                     val data = response.body()?.data
-                    _arabicAyah.value = data?.getOrNull(0)?.ayahs ?: emptyList()
-                    _translationAyah.value = data?.getOrNull(1)?.ayahs ?: emptyList()
+                    _arabicAyah.value = data?.find { it.edition.identifier == "ar.abdurrahmaansudais" }?.ayahs ?: emptyList()
+                    _translationAyah.value = data?.find { it.edition.identifier == "id.indonesian" }?.ayahs ?: emptyList()
+
                     _error.value = null
                 } else {
                     _error.value = "Gagal memuat detail surah."

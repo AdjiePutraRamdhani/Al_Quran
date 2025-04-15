@@ -10,50 +10,56 @@
     >
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:background="?android:selectableItemBackground">
+        android:layout_height="268dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/tvAyahNumber"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_gravity="end"
             android:background="@drawable/ayah_number_circle"
             android:gravity="center"
             android:text="1"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:layout_gravity="end" />
+            android:textSize="14sp" />
 
 
         <TextView
             android:id="@+id/tvArabicAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
-            android:textSize="22sp"
-            android:gravity="end"
-            android:textDirection="ltr"
             android:fontFamily="@font/amiri_quran"
-            android:textColor="@color/black"/>
+            android:gravity="end"
+            android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
+            android:textColor="@color/black"
+            android:textDirection="ltr"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/play_circle_24px"
+            android:background="@android:color/transparent"
+            android:contentDescription="Play Audio"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/black" />
 
         <TextView
             android:id="@+id/tvTranslationAyah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Segala puji bagi Allah, Tuhan semesta alam."
             android:fontFamily="@font/amiri_quran"
-            android:textSize="16sp"
             android:paddingTop="8dp"
-            android:textColor="@color/black"/>
+            android:text="Segala puji bagi Allah, Tuhan semesta alam."
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            card_view:srcCompat="@android:drawable/ic_media_play" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

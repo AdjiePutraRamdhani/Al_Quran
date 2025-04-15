@@ -13,5 +13,6 @@ data class SurahDetail(
 data class Ayah(
     val numberInSurah: Int,
     val text: String,
-    val translationId: String
+    val translationId: String,
+    val audio: String? = null
 )
