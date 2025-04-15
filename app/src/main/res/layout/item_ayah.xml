@@ -1,30 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:background="?android:selectableItemBackground">
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp"
+    card_view:cardBackgroundColor="@color/surahBackground"
+    >
 
-    <TextView
-        android:id="@+id/tvArabicAyah"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
-        android:textSize="22sp"
-        android:gravity="end"
-        android:textDirection="ltr"
-        android:fontFamily="@font/amiri_quran"
-        android:textColor="@color/black"/>
+        android:padding="12dp"
+        android:background="?android:selectableItemBackground">
 
-    <TextView
-        android:id="@+id/tvTranslationAyah"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Segala puji bagi Allah, Tuhan semesta alam."
-        android:fontFamily="@font/amiri_quran"
-        android:textSize="16sp"
-        android:paddingTop="8dp"
-        android:textColor="@color/black"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvAyahNumber"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ayah_number_circle"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_gravity="end" />
+
+
+        <TextView
+            android:id="@+id/tvArabicAyah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
+            android:textSize="22sp"
+            android:gravity="end"
+            android:textDirection="ltr"
+            android:fontFamily="@font/amiri_quran"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvTranslationAyah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Segala puji bagi Allah, Tuhan semesta alam."
+            android:fontFamily="@font/amiri_quran"
+            android:textSize="16sp"
+            android:paddingTop="8dp"
+            android:textColor="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@android:drawable/ic_media_play" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

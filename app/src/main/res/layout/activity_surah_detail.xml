@@ -4,16 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp">
+    android:padding="12dp"
+    android:background="@color/highlight">
 
-    <TextView
-        android:id="@+id/tvSurahTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Surah Name"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:paddingBottom="8dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="21dp">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/header">
+
+        <TextView
+            android:id="@+id/tvSurahTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Surah Name"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -26,5 +39,7 @@
         android:id="@+id/rvAyat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1">
+
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

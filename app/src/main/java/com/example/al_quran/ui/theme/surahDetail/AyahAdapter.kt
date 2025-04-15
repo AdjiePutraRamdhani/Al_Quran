@@ -14,6 +14,7 @@ class AyahAdapter(
 ) : RecyclerView.Adapter<AyahAdapter.AyahViewHolder>() {
 
     inner class AyahViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tvAyahNumber: TextView = itemView.findViewById(R.id.tvAyahNumber)
         val tvArabic: TextView = itemView.findViewById(R.id.tvArabicAyah)
         val tvTranslation: TextView = itemView.findViewById(R.id.tvTranslationAyah)
     }
@@ -24,7 +25,9 @@ class AyahAdapter(
     }
 
     override fun onBindViewHolder(holder: AyahViewHolder, position: Int) {
-        holder.tvArabic.text = arabicList[position].text
+        val ayah = arabicList[position]
+        holder.tvAyahNumber.text = ayah.numberInSurah.toString()
+        holder.tvArabic.text = ayah.text
         holder.tvTranslation.text = translationList.getOrNull(position)?.text ?: ""
     }
 
