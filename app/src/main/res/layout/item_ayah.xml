@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="?android:selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tvArabicAyah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"
+        android:textSize="22sp"
+        android:gravity="end"
+        android:textDirection="ltr"
+        android:fontFamily="@font/amiri_quran"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvTranslationAyah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Segala puji bagi Allah, Tuhan semesta alam."
+        android:fontFamily="@font/amiri_quran"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"/>
+</LinearLayout>
